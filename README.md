@@ -2,6 +2,7 @@
 
 **A python module for English lemmatization and inflection.**
 
+**This fork adds a flask-based Docker image**
 
 ## About
 LemmInflect uses a dictionary approach to lemmatize English words and inflect them into forms specified by a user supplied [Universal Dependencies](https://universaldependencies.org/u/pos/) or [Penn Treebank](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html) tag.  The library works with out-of-vocabulary (OOV) words by applying neural network techniques to classify word forms and choose the appropriate morphing rules.
@@ -15,6 +16,12 @@ A more simplistic inflection only system is available as [pyInflect](https://git
 * Independence from the spaCy lemmatizer
 * Neural nets to disambiguate out of vocab morphology
 * Unigrams to dismabiguate spellings and multiple word forms
+
+## Server
+
+Folder `web_api` contains a simple server using Flask for development
+The Dockerfile in that folder specifies a build using [Gunicorn](https://flask.palletsprojects.com/en/1.1.x/deploying/wsgi-standalone/) for production.
+[Postman](https://learning.postman.com/) tests are in `lemminflect XXXX.postman_collection.json`, where XXXX refers to the port (5000 for flask, 8000 for gunicorn).
 
 
 ## Documentation
