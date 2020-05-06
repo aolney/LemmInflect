@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "83e68c05-c80c-40cf-b13f-85c38f210010",
+		"name": "lemminflect 8000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getLemma",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"word\":\"watches\",\n\t\"upos\":\"VERB\",\n\t\"lemmatize_oov\":\"True\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/getLemma",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getLemma"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllLemmas",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"word\": \"watches\",\n    \"upos\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/getAllLemmas",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getAllLemmas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllLemmasOOV",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"word\": \"watches\",\n    \"upos\": \"NOUN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/getAllLemmasOOV",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getAllLemmasOOV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isTagBaseForm",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tag\": \"NNS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/isTagBaseForm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"isTagBaseForm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInflection",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lemma\":\"watch\",\n\t\"tag\":\"VBD\",\n\t\"inflect_oov\":\"True\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/getInflection",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getInflection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllInflections",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lemma\":\"watch\",\n\t\"upos\":\"VERB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/getAllInflections",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getAllInflections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllInflectionsOOV",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"lemma\":\"watch\",\n\t\"upos\":\"NOUN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/getAllInflectionsOOV",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getAllInflectionsOOV"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "a465de8e-0d59-400f-8b2e-fbd246b9459f",
+			"key": "lemma",
+			"value": "watch",
+			"type": "string"
+		},
+		{
+			"id": "54f064c6-49fd-408b-889c-23d4c77367bc",
+			"key": "tag",
+			"value": "VBD",
+			"type": "string"
+		},
+		{
+			"id": "4c32d789-42e9-4416-b444-ca932d514416",
+			"key": "inflect_oov",
+			"value": "True",
+			"type": "string"
+		},
+		{
+			"id": "3803615d-9b4b-4536-b6e4-faab26f8553a",
+			"key": "upos",
+			"value": "VERB",
+			"type": "string"
+		},
+		{
+			"id": "c25b1903-74ce-4773-8c34-9d45f5c6b5d7",
+			"key": "word",
+			"value": "watches",
+			"type": "string"
+		},
+		{
+			"id": "070f9f67-7029-4b39-9167-6a082b04422d",
+			"key": "lemmatize_oov",
+			"value": "True",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
